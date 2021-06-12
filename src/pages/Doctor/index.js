@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {JSONCatDoctor} from '../../assets';
 import {Gap} from '../../components';
 import {
   DoctorCategory,
@@ -25,10 +26,9 @@ export default function Doctor() {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.category}>
                 <Gap width={32} />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
+                {JSONCatDoctor.data.map(item => {
+                  return <DoctorCategory category={item.category} />;
+                })}
                 <Gap width={22} />
               </View>
             </ScrollView>

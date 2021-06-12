@@ -1,15 +1,14 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {DummyDoctor2} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-export default function MessageList() {
+export default function MessageList({profile, name, desc}) {
   return (
     <View style={styles.container}>
-      <Image source={DummyDoctor2} style={styles.avatar} />
+      <Image source={profile} style={styles.avatar} />
       <View style={styles.text}>
-        <Text style={styles.name}>Bryan Alex</Text>
-        <Text style={styles.chat}>Oke menurut pak dokter bagaimana unt...</Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.chat}>{desc}</Text>
       </View>
     </View>
   );
