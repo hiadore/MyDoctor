@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {ILCatObat, ILCatPsikiater, ILCatUmum} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 import {Gap} from '../../atoms';
 
-export default function DoctorCategory({category}) {
+export default function DoctorCategory({category, onPress}) {
   const Icon = () => {
     if (category === 'dokter umum') {
       return <ILCatUmum style={styles.illustration} />;
@@ -18,12 +18,12 @@ export default function DoctorCategory({category}) {
     return <ILCatUmum style={styles.illustration} />;
   };
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Icon />
       <Gap height={28} />
       <Text style={styles.text1}>Saya butuh</Text>
       <Text style={styles.text2}>{category}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 

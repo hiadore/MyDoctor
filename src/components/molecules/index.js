@@ -4,7 +4,7 @@ import HomeProfile from './HomeProfile';
 import DoctorCategory from './DoctorCategory';
 import DoctorRating from './DoctorRating';
 import NewsItem from './NewsItem';
-import MessageList from './MessageList';
+import DoctorList from './DoctorList';
 import HospitalsList from './HospitalsList';
 
 export {
@@ -14,6 +14,6 @@ export {
   DoctorCategory,
   DoctorRating,
   NewsItem,
-  MessageList,
+  DoctorList,
   HospitalsList,
 };
