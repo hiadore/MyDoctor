@@ -1,9 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {colors, fonts} from '../../../utils';
+import BtnIconSend from './BtnIconSend';
 import IconOnly from './IconOnly';
 
-export default function Button({type, icon, title, onPress}) {
+export default function Button({type, icon, disable, title, onPress}) {
+  if (type === 'btn-icon-send') {
+    return <BtnIconSend disable={disable} />;
+  }
   if (type === 'icon-only') {
     return <IconOnly icon={icon} onPress={onPress} />;
   }

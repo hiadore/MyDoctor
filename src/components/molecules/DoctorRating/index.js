@@ -1,11 +1,11 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {DummyDoctor1, IconStart} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-export default function DoctorRating() {
+export default function DoctorRating({onPress}) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={DummyDoctor1} style={styles.avatar} />
       <View style={styles.profile}>
         <Text style={styles.name}>Nindy Ayunda</Text>
@@ -16,7 +16,7 @@ export default function DoctorRating() {
       <IconStart />
       <IconStart />
       <IconStart />
-    </View>
+    </TouchableOpacity>
   );
 }
 

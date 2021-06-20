@@ -1,19 +1,19 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {DummyUser} from '../../../assets';
 import {fonts, colors} from '../../../utils';
 import {Gap} from '../../atoms';
 
-export default function HomeProfile() {
+export default function HomeProfile({onPress}) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={DummyUser} style={styles.avatar} />
       <Gap width={12} />
       <View style={styles.text}>
         <Text style={styles.name}>Melisa Elvadira</Text>
         <Text style={styles.job}>Graphic Designer</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

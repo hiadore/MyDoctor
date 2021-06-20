@@ -1,18 +1,41 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {IconNext} from '../../../assets';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  IconHelp,
+  IconLanguage,
+  IconNext,
+  IconProfile,
+  IconRating,
+} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-export default function DoctorList({profile, name, desc, type}) {
+export default function DoctorList({profile, name, desc, type, onPress, icon}) {
+  const Icon = () => {
+    if (icon === 'user-profile') {
+      return <IconProfile />;
+    }
+    if (icon === 'language') {
+      return <IconLanguage />;
+    }
+    if (icon === 'rate') {
+      return <IconRating />;
+    }
+    if (icon === 'help') {
+      return <IconHelp />;
+    }
+    return <IconProfile />;
+  };
+
   return (
-    <View style={styles.container}>
-      <Image source={profile} style={styles.avatar} />
+    <TouchableOpacity style={styles.container} onPress={onPress}>
+      {icon ? <Icon /> : <Image source={profile} style={styles.avatar} />}
+
       <View style={styles.text}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.chat}>{desc}</Text>
       </View>
       {type === 'next' && <IconNext />}
-    </View>
+    </TouchableOpacity>
   );
 }
 

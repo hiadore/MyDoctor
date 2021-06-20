@@ -23,6 +23,7 @@ export default function ChooseDoctor({navigation}) {
         name="Alexander Jannie"
         desc="Wanita"
         type="next"
+        onPress={() => navigation.navigate('Chat')}
       />
       <DoctorList
         profile={DummyDoctor8}

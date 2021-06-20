@@ -10,14 +10,14 @@ import {
 } from '../../components';
 import {colors, fonts} from '../../utils';
 
-export default function Doctor({navigation}) {
+export default function Doctor({navigation, onPress}) {
   return (
     <View style={styles.page}>
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Gap height={30} />
           <View style={styles.sectionWrapper}>
-            <HomeProfile />
+            <HomeProfile onPress={() => navigation.navigate('UserProfile')} />
             <Text style={styles.welcome}>
               Mau konsultasi dengan siapa hari ini?
             </Text>
@@ -41,11 +41,17 @@ export default function Doctor({navigation}) {
           </View>
           <View style={styles.sectionWrapper}>
             <Text style={styles.sectionlabel}>Top Rated Doctors</Text>
-            <DoctorRating />
+            <DoctorRating
+              onPress={() => navigation.navigate('DoctorProfile')}
+            />
             <Gap height={16} />
-            <DoctorRating />
+            <DoctorRating
+              onPress={() => navigation.navigate('DoctorProfile')}
+            />
             <Gap height={16} />
-            <DoctorRating />
+            <DoctorRating
+              onPress={() => navigation.navigate('DoctorProfile')}
+            />
           </View>
           <View style={styles.sectionWrapper}>
             <Text style={styles.sectionlabel}>Good News</Text>
