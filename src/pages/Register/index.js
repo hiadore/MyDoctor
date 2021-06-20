@@ -44,6 +44,7 @@ export default function Register({navigation}) {
             label="Password"
             value={form.password}
             onChangeText={value => setForm('password', value)}
+            secureTextEntry
           />
           <Gap height={40} />
           <Button title="Continue" onPress={onContinue} />
