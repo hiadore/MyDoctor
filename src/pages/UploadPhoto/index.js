@@ -4,10 +4,10 @@ import {IconAddPhoto, ILNullPhoto} from '../../assets';
 import {Button, Gap, Header, Link} from '../../components';
 import {colors, fonts} from '../../utils';
 
-export default function UploadPhoto() {
+export default function UploadPhoto({navigation}) {
   return (
     <View style={styles.page}>
-      <Header label="Upload Photo" />
+      <Header label="Upload Photo" onPress={() => navigation.goBack()} />
       <View style={styles.content}>
         <View style={styles.profile}>
           <View style={styles.avatarWrapper}>
@@ -18,9 +18,17 @@ export default function UploadPhoto() {
           <Text style={styles.job}>Graphic Designer</Text>
         </View>
         <View>
-          <Button title="Upload and Continue" />
+          <Button
+            title="Upload and Continue"
+            onPress={() => navigation.replace('MainApp')}
+          />
           <Gap height={30} />
-          <Link text="Skip for this" size={16} align="center" />
+          <Link
+            text="Skip for this"
+            size={16}
+            align="center"
+            onPress={() => navigation.replace('MainApp')}
+          />
         </View>
       </View>
     </View>

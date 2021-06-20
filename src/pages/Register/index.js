@@ -6,7 +6,7 @@ import {colors} from '../../utils';
 export default function Register({navigation}) {
   return (
     <View style={styles.page}>
-      <Header label="Daftar Akun" />
+      <Header label="Daftar Akun" onPress={() => navigation.goBack()} />
       <Gap height={10} />
       <View style={styles.form}>
         <Input label="Full Name" />

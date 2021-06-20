@@ -24,7 +24,10 @@ export default function DoctorProfile({navigation}) {
           <ProfileItem title="No. STR" desc="000116622081996" />
         </View>
         <View style={styles.action}>
-          <Button title="Start Consultation" />
+          <Button
+            title="Start Consultation"
+            onPress={() => navigation.navigate('Chat')}
+          />
         </View>
       </View>
     </View>

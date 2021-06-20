@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {DummyUser} from '../../assets';
-import {DoctorList, Header, Profile, Gap} from '../../components';
+import {CommonList, Header, Profile, Gap} from '../../components';
 import {colors} from '../../utils';
 
 export default function UserProfile({navigation}) {
@@ -14,28 +14,28 @@ export default function UserProfile({navigation}) {
         avatar={DummyUser}
       />
       <Gap height={30} />
-      <DoctorList
+      <CommonList
         name="Edit Profile"
         desc="Last update yesterday"
         type="next"
         icon="user-profile"
         onPress={() => navigation.navigate('EditProfile')}
       />
-      <DoctorList
+      <CommonList
         name="Language"
-        desc="Last update yesterday"
+        desc="12 Languages available"
         type="next"
         icon="language"
       />
-      <DoctorList
+      <CommonList
         name="Give Us Rate"
-        desc="Last update yesterday"
+        desc="On Google Play Store"
         type="next"
         icon="rate"
       />
-      <DoctorList
+      <CommonList
         name="Help Center"
-        desc="Last update yesterday"
+        desc="Read our guidelines"
         type="next"
         icon="help"
       />

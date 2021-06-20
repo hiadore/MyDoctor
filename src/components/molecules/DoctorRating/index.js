@@ -1,15 +1,15 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {DummyDoctor1, IconStart} from '../../../assets';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {IconStart} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-export default function DoctorRating({onPress}) {
+export default function DoctorRating({name, desc, avatar, onPress}) {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={DummyDoctor1} style={styles.avatar} />
+      <Image source={avatar} style={styles.avatar} />
       <View style={styles.profile}>
-        <Text style={styles.name}>Nindy Ayunda</Text>
-        <Text style={styles.category}>Pediatrician</Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.category}>{desc}</Text>
       </View>
       <IconStart />
       <IconStart />

@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import {DummyUser} from '../../assets';
 import {Button, Gap, Header, Input, Profile} from '../../components';
 import {colors} from '../../utils';
 
@@ -9,7 +10,7 @@ export default function EditProfile({navigation}) {
       <Header label="Edit Profile" onPress={() => navigation.goBack()} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
-          <Profile icon="remove" />
+          <Profile avatar={DummyUser} icon="remove" />
           <Gap height={26} />
           <Input label="Full Name" />
           <Gap height={24} />
@@ -19,7 +20,7 @@ export default function EditProfile({navigation}) {
           <Gap height={24} />
           <Input label="Password" />
           <Gap height={40} />
-          <Button title="Save Profile" />
+          <Button title="Save Profile" onPress={() => navigation.goBack()} />
         </View>
       </ScrollView>
     </View>

@@ -7,7 +7,7 @@ import {
   DummyDoctor8,
   DummyDoctor9,
 } from '../../assets';
-import {Header, DoctorList} from '../../components';
+import {Header, CommonList} from '../../components';
 import {colors} from '../../utils';
 
 export default function ChooseDoctor({navigation}) {
@@ -18,36 +18,40 @@ export default function ChooseDoctor({navigation}) {
         type="dark"
         onPress={() => navigation.goBack()}
       />
-      <DoctorList
+      <CommonList
         profile={DummyDoctor7}
         name="Alexander Jannie"
         desc="Wanita"
         type="next"
         onPress={() => navigation.navigate('Chat')}
       />
-      <DoctorList
+      <CommonList
         profile={DummyDoctor8}
         name="Kakashi Hatake"
         desc="Pria"
         type="next"
+        onPress={() => navigation.navigate('Chat')}
       />
-      <DoctorList
+      <CommonList
         profile={DummyDoctor9}
         name="Hinata Hyuga"
         desc="Wanita"
         type="next"
+        onPress={() => navigation.navigate('Chat')}
       />
-      <DoctorList
+      <CommonList
         profile={DummyDoctor10}
         name="Sasuke Uchiha"
         desc="Pria"
         type="next"
+        onPress={() => navigation.navigate('Chat')}
       />
-      <DoctorList
+      <CommonList
         profile={DummyDoctor11}
         name="Tsunade"
         desc="Wanita"
         type="next"
+        onPress={() => navigation.navigate('Chat')}
       />
     </View>
   );

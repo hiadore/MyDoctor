@@ -1,6 +1,11 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import {JSONCatDoctor} from '../../assets';
+import {
+  DummyDoctor1,
+  DummyDoctor2,
+  DummyDoctor3,
+  JSONCatDoctor,
+} from '../../assets';
 import {Gap} from '../../components';
 import {
   DoctorCategory,
@@ -42,14 +47,23 @@ export default function Doctor({navigation, onPress}) {
           <View style={styles.sectionWrapper}>
             <Text style={styles.sectionlabel}>Top Rated Doctors</Text>
             <DoctorRating
+              name="Alexa Rachel"
+              desc="Pediatrician"
+              avatar={DummyDoctor3}
               onPress={() => navigation.navigate('DoctorProfile')}
             />
             <Gap height={16} />
             <DoctorRating
+              name="Sunny Frank"
+              desc="Dentist"
+              avatar={DummyDoctor2}
               onPress={() => navigation.navigate('DoctorProfile')}
             />
             <Gap height={16} />
             <DoctorRating
+              name="Poe Min"
+              desc="Podiatrist"
+              avatar={DummyDoctor1}
               onPress={() => navigation.navigate('DoctorProfile')}
             />
           </View>
@@ -72,7 +86,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.secondary,
   },
   container: {
-    // paddingHorizontal: 16,
     paddingVertical: 0,
     backgroundColor: colors.white,
     flex: 1,

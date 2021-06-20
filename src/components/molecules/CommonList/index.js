@@ -9,7 +9,7 @@ import {
 } from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-export default function DoctorList({profile, name, desc, type, onPress, icon}) {
+export default function CommonList({profile, name, desc, type, onPress, icon}) {
   const Icon = () => {
     if (icon === 'user-profile') {
       return <IconProfile />;
